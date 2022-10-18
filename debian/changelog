@@ -1,0 +1,31 @@
+ruby-instantiator (0.0.7-1) unstable; urgency=medium
+
+  * New upstream version 0.0.7
+  * debian/control: remove obsolete DM-Upload-Allowed flag
+  * debian/copyright: use DEP5 copyright-format/1.0 official URL for Format field
+  * Remove version in the gem2deb build-dependency
+  * Run wrap-and-sort on packaging files
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Move debian/watch to gemwatch.debian.net
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump debhelper compatibility level to 11
+  * Declare Testsuite as autopkgtest-pkg-ruby
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 07 Jan 2019 11:52:19 +0100
+
+ruby-instantiator (0.0.6+git9cbbe70-2) unstable; urgency=low
+
+  * Bump build dependency on gem2deb to >= 0.3.0~
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Tue, 26 Jun 2012 10:51:51 +0200
+
+ruby-instantiator (0.0.6+git9cbbe70-1) unstable; urgency=low
+
+  * Initial release (Closes: #653927)
+  * 0100_remove_rubygems_bundler_stuff.patch: remove require statements on
+    rubygems and bundler from tests.
+  * 0200_fix_path_in_require.patch: fix path of test_helper in require
+    statement of tests.
+  * Package git snapshot to get upstream COPYING.txt file.
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Wed, 25 Jan 2012 00:28:19 +0100

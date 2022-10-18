@@ -1,0 +1,25 @@
+Source: ruby-instantiator
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Cédric Boutillier <cedric.boutillier@gmail.com>
+Build-Depends: debhelper (>= 11~),
+               gem2deb,
+               ruby-blankslate
+Standards-Version: 4.3.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-instantiator.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-instantiator
+Homepage: https://github.com/floehopper/instantiator
+XS-Ruby-Versions: all
+Testsuite: autopkgtest-pkg-ruby
+
+Package: ruby-instantiator
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-blankslate,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Ruby library to instantiate an arbitrary class
+ This Ruby library permits the instantiation of an arbitrary class without
+ knowing anything about the constructor.

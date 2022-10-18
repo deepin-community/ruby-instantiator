@@ -1,0 +1,13 @@
+Description: Remove requirements on bundler and rubygems
+Author: Cédric Boutillier <cedric.boutillier@gmail.com>
+Forwarded: no
+Last-Update: 2011-12-31
+
+--- a/test/test_helper.rb
++++ b/test/test_helper.rb
+@@ -1,5 +1 @@
+-require "rubygems"
+-require "bundler"
+-Bundler.setup(:default, :development)
+-
+ require "test/unit"
