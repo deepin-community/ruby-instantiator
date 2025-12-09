@@ -1,0 +1,24 @@
+From: Lucas Kanashiro <kanashiro@ubuntu.com>
+Date: Thu, 22 Feb 2024 22:08:45 -0300
+Subject: Fix FTBFS with Ruby 3.2
+
+Use Integer instead of Fixnum (removed from Ruby 3.2)
+
+Forwarded: no
+---
+ test/method_invocation_sink_test.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/test/method_invocation_sink_test.rb b/test/method_invocation_sink_test.rb
+index 51bd80f..3033d85 100644
+--- a/test/method_invocation_sink_test.rb
++++ b/test/method_invocation_sink_test.rb
+@@ -14,7 +14,7 @@ class MethodInvocationSinkTest < Test::Unit::TestCase
+   end
+ 
+   def test_should_return_instance_of_fixnum
+-    assert_instance_of Fixnum, @sink.to_int
++    assert_instance_of Integer, @sink.to_int
+   end
+ 
+   def test_should_return_instance_of_array
