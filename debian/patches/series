@@ -1,2 +1,3 @@
 0100_remove_rubygems_bundler_stuff.patch
 0200_fix_path_in_require.patch
+0003-Fix-FTBFS-with-Ruby-3.2.patch
